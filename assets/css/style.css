@@ -1,0 +1,113 @@
+header {
+    background-color: teal;
+    box-shadow: 5px 3px 10px #000;
+    text-align: left;
+    padding: 20px 10px;
+    position: fixed;
+    top: 0px;
+    margin: 0 0 0 -8px;
+    width: 100%;
+    font-family: 'Alegreya SC', serif;
+    z-index: 999;
+}
+header h1 {
+    color: #eeeeee;
+    font-size: 40px;
+    padding: 0;
+    line-height: 100%; 
+    display: inline;
+    font-weight: normal;
+}
+header ul {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+}
+header li {
+    display: inline; 
+    color: #fff;
+    letter-spacing: 1px;
+
+}
+header li::after {
+    content: " » "
+}
+header a {
+    color: #fff;
+    font-family: 'Syne Mono', monospace;
+}
+
+body {
+    background-image:url('../images/mountains.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section {
+    margin: 5% 20% 5% 0;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 6px;
+    box-shadow: 5px 3px 10px #000;
+    padding: 10px;
+}
+
+.hero {
+    height: 500px;
+}
+
+#profile {
+    min-height: 15px;
+}
+section h2 {
+    font-family: 'Alegreya SC', serif;
+    font-size: 40px;
+    background-color: teal;
+    color: #fff;
+    text-align: right;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 3px #000;
+}
+
+#profile img {
+    width: 150px;
+    height: 150px;
+    float: right;
+    object-fit: cover;
+    margin-left: 15px;
+}
+#profile p {
+    font-family: 'Alegreya SC', serif;
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+.contact {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    background-color: rgba(255,255,255,0.4);
+    color: #000;
+    font-family: 'Syne Mono', monospace;
+    font-size: 15px;
+    height: 40%;
+    width: 17%;
+    padding: 30px 10px 0 10px;
+    z-index: 1;
+}
+
+footer {
+    background-color: teal;
+    box-shadow: 5px 3px 10px #000;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Syne Mono', monospace;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    margin: 0 0 0 -10px;
+    z-index: 998;
+}
