@@ -8,6 +8,26 @@
     --SansFont: 'Dosis', sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--NeutColor);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--AltColor);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--MainColor);
+  }
+
 /* designates style */
 header {
     background-color: var(--MainColor);
@@ -90,8 +110,42 @@ section h2 {
     margin: 20px 0 -20px 0;
 }
 
+/* sets the profile sections flex parent */
+.profileFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    padding: 15px;
+    border: 2px solid var(--AltColor);
+    padding: 0 15px;
+    margin: 0 20% 100px 20%;
+}
+
+/* styles the profile image style */
+#profile img {
+    flex: 1 1 20%;
+    height: 280px;
+    object-fit: cover;
+    border: 10px solid var(--AltColor);
+    margin-right: 15px;
+}
+
+/* styles the profile paragraph */
+#profile p {
+    flex: 1 1 30%;
+    height: 250px;
+    overflow: auto;
+    padding: 25px;
+    background-color: rgba(255,255,255,0.4);
+    color: #000;
+    font-family: var(--SansFont);
+    text-align: justify;
+}
+
 /* sets the border around the section paragraph */
-section .pBorder {
+#applications .pBorder {
     border: 2px solid var(--AltColor);
     padding: 10px;
     width: 50%;
@@ -99,7 +153,7 @@ section .pBorder {
 }
 
 /* sets the style for the application section paragraph */
-section p {
+#applications p {
     background-color: rgba(255,255,255,0.4);
     padding: 15px;
     margin: 0px;
@@ -159,9 +213,9 @@ section p {
     font-family: var(--SansFont);
     font-size: 15px;
     text-align: center;
-    color: #fff;
-    background-color: var(--NeutColor);
-    font-weight: normal;
+    color: var(--AltColor);
+    background-color: rgba(0,0,0,0.3);
+    border-bottom: 2px solid var(--AltColor);
     padding: 5px;
     margin-top: 0;
 }
@@ -178,7 +232,21 @@ footer {
 }
 /* media queries to change code on small viewports */
 @media screen and (max-width: 768px) {
-    section .pBorder {
+    .profileFlex {
+        flex-direction: column;
+        margin: 0 10% 150px 10%;
+        padding: 15px;
+    }
+    #profile img {
+        width: 95%;
+        max-height: 300px;
+        object-fit: cover;
+        margin: 0;
+    }
+    #profile p {
+        height: 300px;
+    }
+    #applications .pBorder {
         width: 80%;
     }
     .appsFlex {
