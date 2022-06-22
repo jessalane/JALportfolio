@@ -8,6 +8,12 @@
     --SansFont: 'Dosis', sans-serif;
 }
 
+/* setting no underline, and the cursor turns into a pointer over a link */
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -167,6 +173,7 @@ section h2 {
     align-items: center;
     align-content: space-around;
     padding: 15px;
+    margin: 20px 7%;
 }
 
 /* application tiles */
@@ -175,26 +182,19 @@ section h2 {
     background-size: cover;
     margin: 10px;
     border: 2px solid var(--AltColor);
-    transition: all .2s ease-in-out; 
 }
 
 /* designates that the first child will fill the width of the viewport */
 .appImg:first-child {
     flex: 1 1 100%;
-    height: 200px;
+    height: 300px; 
 }
 
 /* designates that the rest of the children will tile in a regular flex box */
 .appImg:not(:first-child) {
-    flex: 2 2 30%;
-    height: 200px;
+    flex: 2 2 40%;
+    height: 300px;
   }
-
-/* image tiles hover response */
-.appImg:hover {
-    box-shadow: 0 0 10px #000;
-    transform: scale(1.1);
-}
 
 /* image tiles h3 styling */
 .appImg h3 {
@@ -206,6 +206,7 @@ section h2 {
     font-weight: normal;
     padding: 10px;
     margin-bottom: 0;
+    transition: all .2s ease-in-out; 
 }
 
 /* image tiles h4 styling */
@@ -218,18 +219,77 @@ section h2 {
     border-bottom: 2px solid var(--AltColor);
     padding: 5px;
     margin-top: 0;
+    transition: all .2s ease-in-out; 
 }
 
+a h3:hover {
+    box-shadow: 0 0 10px #000;
+    transform: scale(1.1);
+}
+
+/* styling footer */
 footer {
-    background-color: var(--AltColor);
-    color: #fff;
-    font-size: 20px;
+    border-top: 3px solid var(--AltColor);
+    padding-top: 20px;
+}
+
+/* styling the contact section */
+#contact {
+    background-color: var(--NeutColor);
+    color: var(--MainColor);
+    font-size: 15px;
     text-align: center;
     font-family: var(--MonoFont);
     width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
 }
+
+/* setting flex container for the contact section */
+.contactChild {
+    flex 1;
+    width: 40%;
+    height: 200px;
+    padding: 15px;
+    margin: 2%;
+    text-align: left;
+}
+
+/* setting style for contact header */
+.contactChild h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* styling links in the contact section */
+.contactChild a {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+.contactChild a:hover {
+    color: var(--MainColor);
+}
+
+/* styling the form */
+#message {
+    width: 80%;
+    height: 100px;
+    overflow: auto;
+    margin-top: 10px;
+    word-wrap: normal;
+}
+#submit {
+    font-family: var(--SansFont);
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
 /* media queries to change code on small viewports */
 @media screen and (max-width: 768px) {
     .profileFlex {
