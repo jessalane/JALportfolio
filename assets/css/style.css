@@ -290,7 +290,7 @@ footer {
     margin-top: 10px;
 }
 
-/* Large smartphones - navbar changes color */
+/* breakpoints for tablets */
   @media screen and (max-width: 992px) {
     #splash h1 {
         font-size: 50px;
@@ -321,7 +321,7 @@ footer {
     }
   }
   
-  /* Small smartphones - image placeholders change color */
+  /* breakpoint for smart phones */
   @media screen and (max-width: 768px) {
     .profileFlex {
         flex-direction: column;
@@ -346,7 +346,7 @@ footer {
     }
   }
   
-
+/* breakpoint for smaller smart phones */
 @media screen and (max-width: 576px) {
     .profileFlex {
         flex-direction: column;
