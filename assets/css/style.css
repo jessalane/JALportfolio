@@ -93,6 +93,7 @@ body {
     color: #fff;
     text-shadow: 2px 3px 5px #000;
     margin: 0;
+    text-align: center;
 }
 
 /* splash page sug header styling */
@@ -182,6 +183,7 @@ section h2 {
     background-size: cover;
     margin: 10px;
     border: 2px solid var(--AltColor);
+    transition: all .2s ease-in-out; 
 }
 
 /* designates that the first child will fill the width of the viewport */
@@ -192,7 +194,7 @@ section h2 {
 
 /* designates that the rest of the children will tile in a regular flex box */
 .appImg:not(:first-child) {
-    flex: 2 2 40%;
+    flex: 1 1 30%;
     height: 300px;
   }
 
@@ -206,7 +208,6 @@ section h2 {
     font-weight: normal;
     padding: 10px;
     margin-bottom: 0;
-    transition: all .2s ease-in-out; 
 }
 
 /* image tiles h4 styling */
@@ -219,10 +220,9 @@ section h2 {
     border-bottom: 2px solid var(--AltColor);
     padding: 5px;
     margin-top: 0;
-    transition: all .2s ease-in-out; 
 }
 
-a h3:hover {
+a h3:hover .appImg {
     box-shadow: 0 0 10px #000;
     transform: scale(1.1);
 }
@@ -290,8 +290,14 @@ footer {
     margin-top: 10px;
 }
 
-/* media queries to change code on small viewports */
-@media screen and (max-width: 768px) {
+/* Large smartphones - navbar changes color */
+  @media screen and (max-width: 992px) {
+    #splash h1 {
+        font-size: 50px;
+    }
+    #splash h2 {
+        font-size: 15px;
+    }
     .profileFlex {
         flex-direction: column;
         margin: 0 10% 150px 10%;
@@ -308,6 +314,56 @@ footer {
     }
     #applications .pBorder {
         width: 80%;
+    }
+    .appImg {
+        flex: 1 1 50%;
+        min-height: 250px;
+    }
+  }
+  
+  /* Small smartphones - image placeholders change color */
+  @media screen and (max-width: 768px) {
+    .profileFlex {
+        flex-direction: column;
+        margin: 0 10% 150px 10%;
+        padding: 15px;
+    }
+    #profile img {
+        width: 95%;
+        max-height: 300px;
+        object-fit: cover;
+        margin: 0;
+    }
+    #profile p {
+        height: 300px;
+    }
+    #applications .pBorder {
+        width: 80%;
+    }
+    .appImg {
+        flex: 1 1 50%;
+        min-height: 250px;
+    }
+  }
+  
+
+@media screen and (max-width: 576px) {
+    .profileFlex {
+        flex-direction: column;
+        margin: 0 5% 150px 5%;
+        padding: 15px;
+    }
+    #profile img {
+        width: 95%;
+        max-height: 300px;
+        object-fit: cover;
+        margin: 0;
+    }
+    #profile p {
+        height: 300px;
+    }
+    #applications .pBorder {
+        width: 90%;
     }
     .appsFlex {
         flex-direction: column;
