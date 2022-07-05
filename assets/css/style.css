@@ -216,7 +216,7 @@ section h2 {
     font-size: 15px;
     text-align: center;
     color: var(--AltColor);
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.7);
     border-bottom: 2px solid var(--AltColor);
     padding: 5px;
     margin-top: 0;
@@ -390,3 +390,5 @@ footer {
         margin: 10px 0 10px 2%;
     }
   }
+  
+  
