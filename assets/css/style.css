@@ -38,6 +38,10 @@ html {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*--- navigation header ---*/
 nav {
     background-color: var(--MainColor);
@@ -60,7 +64,7 @@ nav {
     text-align: right;
     letter-spacing: 1px;
     font-family: var(--MonoFont);
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -302,6 +306,18 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+    .link {
+        right: 10px;
+        width: 98%;
+        font-size: 13px;
+    }
+    header h1 {
+        font-size: 50px;
+    }
+    
+    header h2 {
+        font-size: 15px;
+    }
     .projFlex {
         flex-flow: column;
         margin: 0 10px 50px 10px;
