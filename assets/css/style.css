@@ -232,16 +232,51 @@ footer {
 .footerContent {
     position: relative;
     width: 100%;
-    height: 120px;
     border: 1px solid var(--NeutColor);
     background-color: var(--NeutColor);
     padding: 20px 10px;
     margin-top: 25px;
     font-family: var(--SansFont);
     font-size: 20px;
-    text-align: justify;
+    text-align: center;
     color: var(--HighlightColor);
     z-index: 901;
+}
+
+.footerContent a {
+    text-decoration: none;
+    height: fit-content;
+    padding: 0;
+    margin: 0 10px;
+}
+
+.footerContent h3 {
+    font-size: 20px;
+    width: fit-content;
+    margin: -50px auto 0 auto;
+    border-bottom: 1px solid var(--HighlightColor);
+}
+
+.footerContact {
+    font-size: 40px;
+    margin: 10px;  
+    display: inline-block;
+    color: var(--HighlightColor);
+}
+
+.footerContact i {
+    vertical-align: middle;
+}
+
+.footerContact:hover {
+    color: var(--AltColor);
+    transform: scale(1.1);
+}
+
+.footerContent h5 {
+    margin: 0;
+    font-size: 15px;
+    display: inline-block;
 }
 
 /* Large smartphones - navbar changes color */
