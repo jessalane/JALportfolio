@@ -11,36 +11,30 @@
     @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Dosis&family=Syne+Mono&display=swap');
   </style>
 </head>
-<!--header begins-->
-<header>
-  <ul>
-    <li><a href="#splash">index</a></li>
-    <li><a href="#profile">about me</a></li>
-    <li><a href="#applications">applications</a></li>
-    <li><a href="#contact">contact</a></li>
-  </ul>
-</header>
-<!--header ends-->
 
 <!--body begins-->
 
 <body>
-  <!---splash page begins-->
-  <div id="splash">
-    <h1>Jessica Lane</h1>
-    <h2>web developer (student) | jessica.lane.a@gmail.com</h2>
-  </div>
-  <!--splash page ends-->
+  <nav></nav>
+  <section class='link'>
+    <a href='/'>home</a>
+    <a href='#about'>about me</a>
+    <a href='#projects'>projects</a>
+    <a href='#contact'>contact</a>
+  </section>
 
-  <!--about me begins-->
-  <section id="profile">
-    <h2>About Me</h2>
-    <div class="profileFlex">
-      <img src="./assets/images/self.jpeg" alt="photograph">
+  <header class="flexCont">
+    <h1>Jessica Lane</h1>
+    <h2>full stack development student</h2>
+    <h6> <a href="#projects">see my work</a></h6>
+  </header>
+  <section id="about">
+    <div class="aboutContent">
+      <h1>About Me</h1>
       <p>
         For me, coding began as a hobby. Back when I was about fifteen I studied it on my own, because it was useful in
         games I was playing. I studied and worked with code deployed on Jcink Forums. Through that, I learned CSS and
-        HTML through tutorials, as well as trial and error.
+        HTML with the aid of tutorials, as well as trial and error.
         <br><br>
         It took years to realize that something I enjoyed so much could prove to be a career. This career is something
         I've loved for most of my life. It's something I'm good at, and I am excited for the chance to work in the
@@ -53,84 +47,46 @@
       </p>
     </div>
   </section>
-  <!--about me ends-->
+  <section id="projects">
+    <h1>My Work</h1>
+    <div class="projFlex">
+      <a href="https://drive.google.com/file/d/1IQO1OVaNxYvMPfJfwqgAVvZ5zWmZJyF6/view">
+        <div class="projCard" style="background-image:url('./assets/images/team\ page.png');">
+          <h4> meet the team generator </h4>
+        </div>
+      </a>
 
-  <!--applications section begins-->
-  <section id="applications">
-    <h2>Body of Work</h2>
-    <div class="pBorder">
-      <p>The following are a list of projects I have worked on. At present I'm still developing my portfolio, so most
-        don't have links to the deployed applications yet.</p>
-    </div>
-    <div class="appsFlex">
-      <div class="appImg" style="background-image:url('./assets/images/cocktailDB\ Screenshot.png');">
-        <a href="https://jessalane.github.io/cocktail-group-application/">
-          <h3>Cocktail Database</h3>
-          <h4>HTML, CSS, APIs, Jquery</h4>
-        </a>
+      <a href="https://jessalane.github.io/cocktail-group-application/">
+      <div class="projCard" style="background-image:url('./assets/images/cocktail.png');">
+        <h4> Cocktail Database </h4>
       </div>
-      <div class="appImg" style="background-image:url('assets/images/generator\ two.png');">
-        <a href="https://jessalane.github.io/PasswordRandomizer/">
-          <h3>Password Generator</h3>
-          <h4>Javascript</h4>
-        </a>
+    </a>
+
+    <a href="https://unplayable.herokuapp.com/">
+      <div class="projCard" style="background-image:url('./assets/images/unplayable.png');">
+        <h4> Unplayable </h4>
       </div>
-      <div class="appImg" style="background-image:url('./assets/images/RPSscreenshot.png');">
-        <a href="https://jessalane.github.io/rock-paper-scissor/">
-          <h3>Rock Paper Scissors Game</h3>
-          <h4>HTML, CSS, Javascript</h4>
-        </a>
+    </a>
+
+    <a href="https://jessalane.github.io/Weather-Dashbord/">
+      <div class="projCard" style="background-image:url('./assets/images/weather\ dash.png');">
+        <h4> weather dashboard </h4>
       </div>
-      <div class="appImg" style="background-image:url('./assets/images/js\ quiz\ screenshot.png');">
-        <a href="https://jessalane.github.io/JavaScript-Fundamentals-Quiz/">
-          <h3>JavaScript Fundamentals Quiz</h3>
-          <h4>HTML, CSS, JavaScript</h4>
-        </a>
+    </a>
+
+    <a href="https://drive.google.com/file/d/16Bx_zXOmAy2HwbKjEHCVCwre9wQnu06R/view">
+      <div class="projCard" style="background-image:url('./assets/images/code.avif');">
+        <h4> employee manager backend </h4>
       </div>
-      <div class="appImg" style="background-image:url('./assets/images/scheduler\ screenshot.png');">
-        <a href="https://jessalane.github.io/Work-Day-Scheduler/">
-          <h3>Workday Scheduler</h3>
-          <h4>HTML, CSS, Jquery, Moment.js</h4>
-        </a>
-      </div>
-      <div class="appImg" style="background-image:url('./assets/images/weather\ dash\ screenshot.png');">
-        <a href="https://jessalane.github.io/Weather-Dashbord/">
-          <h3>Weather Dasboard</h3>
-          <h4>HTML, CSS, Jquery, Weather API, Moment.js</h4>
-        </a>
-      </div>
+    </a>
+      
     </div>
   </section>
-  <!--applications section ends-->
-
+  <footer></footer>
+  <section class="footerContent">
+    footer-like things will go here at some point I think
+  </section>
 </body>
 <!--body ends-->
-
-<!--footer begins-->
-<footer>
-  <div id="contact">
-    <div class="contactChild">
-      <h2>Contact Information</h2>
-      <b>LinkedIn:</b> <span><a href="https://www.linkedin.com/in/jess-a-lane/">jess-a-lane</a></span> <br><br>
-      <b>GitHub:</b> <span><a href="https://github.com/jessalane">jessalane</a></span> <br><br>
-      <b>Email:</b> <span>jessica.lane.a@gmail.com</span>
-    </div>
-    <div class="contactChild" style="border-left: 1px solid #fff;">
-      <form>
-        <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="first and last name"><br>
-
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email" placeholder="your email">
-
-        <textarea type="text" id="message" name="message"
-          placeholder="THIS FORM DOES NOT YET WORK. THIS SITE IS ONLY THE FRONT END, AND IS STILL BEING DEVELOPED."></textarea>
-
-        <input type="submit" value="Submit" id="submit">
-      </form>
-    </div>
-  </div>
-</footer>
-<!--footer ends-->
 
 </html>

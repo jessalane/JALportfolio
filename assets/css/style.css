@@ -1,394 +1,278 @@
 /* variables for colors used in code */
 :root {
-    --MainColor: rgba(0,81,81,1);
-    --AltColor: rgba(70,128,128,1);
-    --NeutColor: rgba(147,159,159,1);
+    --MainColor: rgba(75, 96, 77, 1);
+    --AltColor: rgba(100, 122, 101, 1);
+    --NeutColor: rgba(212, 195, 179, 1);
+    --Neut1Color: rgba(232, 214, 194, 1);
+    --HighlightColor: rgba(149, 78, 72, 1);
     --FunFont: 'Cinzel Decorative', cursive;
     --MonoFont: 'Syne Mono', monospace;
     --SansFont: 'Dosis', sans-serif;
 }
 
-/* setting no underline, and the cursor turns into a pointer over a link */
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: var(--NeutColor);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: var(--AltColor);
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: var(--MainColor);
-  }
+}
 
-/* designates style */
-header {
-    background-color: var(--MainColor);
-    text-align: center;
-    position: fixed;
-    top: 0px;
+body,
+html {
+    position: absolute;
+    overflow-x: hidden;
     margin: 0;
-    padding: 10px 0;
     width: 100%;
+}
+
+/*--- navigation header ---*/
+nav {
+    background-color: var(--MainColor);
+    position: fixed;
+    top: -50px;
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 998;
+    transform: skewY(2deg);
+}
+
+.link {
+    position: fixed;
+    top: 20px;
+    right: 30px;
     z-index: 999;
-}
-
-/* puts the links inline and puts an arrow after each link */
-header li {
     display: inline;
-    color: #fff;
+    width: 90%;
+    text-align: right;
     letter-spacing: 1px;
-}
-header li::after {
-    content: " » "
-}
-
-/* designates style of the links in the header */
-header a {
-    color: #fff;
     font-family: var(--MonoFont);
+    font-size: 17px;
+    font-weight: bold;
 }
 
-/* fixed background for all site content
-designates the gradient overlay
-mountain image from https://unsplash.com/ */
-body {
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(0,0,0,0.7)), 
-        url('../images/mountains.avif');
-    background-size: cover;
-    background-repeat: no-repeat;
+.link a {
+    color: var(--NeutColor);
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+/*--- index image / content ---*/
+header,
+#projects {
+    width: 100%;
+    height: 89vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+        url('../images/desktop.avif');
     background-attachment: fixed;
     background-size: cover;
-    padding: 0;
+    background-repeat: no-repeat;
+    padding: 50px 0;
     margin: 0;
 }
 
-/* splash page container setting height */
-#splash {
-    height: 900px;
+.flexCont {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-/* splash page name styling */
-#splash h1 {
+header h1 {
     font-family: var(--FunFont);
-    font-size: 90px;
-    font-weight: normal;
-    color: #fff;
-    text-shadow: 2px 3px 5px #000;
+    color: var(--NeutColor);
+    font-size: 70px;
+    line-height: 100%;
+    padding: 0;
     margin: 0;
-    text-align: center;
 }
 
-/* splash page sug header styling */
-#splash h2 {
-    font-family: var(--MonoFont);
-    font-size: 25px;
-    font-weight: normal;
-    color: #fff;
-    text-shadow: 2px 3px 5px #000;
-    margin: 0;
-    text-align: center;
-}
-
-/* sets the style of the section header */
-section h2 {
-    font-family: var(--FunFont);
-    font-size: 40px;
-    color: #fff;
-    text-shadow: 2px 3px 5px #000;
-    text-align: center;
-    margin: 20px 0 -20px 0;
-}
-
-/* sets the profile sections flex parent */
-.profileFlex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: space-around;
-    padding: 15px;
-    border: 2px solid var(--AltColor);
-    padding: 0 15px;
-    margin: 0 20% 100px 20%;
-}
-
-/* styles the profile image style */
-#profile img {
-    flex: 1 1 20%;
-    height: 280px;
-    object-fit: cover;
-    border: 10px solid var(--AltColor);
-    margin-right: 15px;
-}
-
-/* styles the profile paragraph */
-#profile p {
-    flex: 1 1 30%;
-    height: 250px;
-    overflow: auto;
-    padding: 25px;
-    background-color: rgba(255,255,255,0.4);
-    color: #000;
+header h2 {
     font-family: var(--SansFont);
+    color: var(--Neut1Color);
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+header h6 {
+    cursor: pointer;
+    font-family: var(--MonoFont);
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+header a {
+    color: var(--HighlightColor);
+}
+
+/*--- mission statement / about us ---*/
+#about {
+    border: 1px solid #fff;
+    color: var(--MainColor);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url('../images/keyboard.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: -30px 0;
+    transform: skewY(2deg);
+}
+
+.aboutContent {
+    width: 80%;
+    margin: 200px auto;
+    font-family: var(--SansFont);
+    font-size: 20px;
+    text-align: center;
+    transform: skewY(-2deg);
+}
+
+.aboutContent p {
     text-align: justify;
 }
 
-/* sets the border around the section paragraph */
-#applications .pBorder {
-    border: 2px solid var(--AltColor);
-    padding: 10px;
-    width: 50%;
-    margin: auto;
+#about h1 {
+    font-family: var(--FunFont);
+    font-size: 40px;
+    margin: 10px 0;
 }
 
-/* sets the style for the application section paragraph */
-#applications p {
-    background-color: rgba(255,255,255,0.4);
-    padding: 15px;
-    margin: 0px;
+/*--- projects code ---*/
+
+#projects {
+    height: auto;
+    text-align: center;
 }
 
-/* applications flex container */
-.appsFlex {
+#projects h1 {
+    font-family: var(--FunFont);
+    font-size: 40px;
+    color: var(--NeutColor);
+}
+
+.projFlex {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     align-content: space-around;
-    padding: 15px;
-    margin: 20px 7%;
+    position: relative;
+    margin: 0 20px 50px 20px;
 }
 
-/* application tiles */
-.appImg {
-    display: inline-block;
+/*--- project cards code ---*/
+
+.projFlex a {
+    flex: 1;
+    flex-grow: 1;
+    flex-basis: 22%;
+    margin: 10px;
+}
+
+.projFlex a:first-child {
+    flex-basis: 44%;
+}
+
+.projCard {
+    width: 100%;
+    min-height: 200px;
+    border: 3px solid var(--AltColor);
+    border-radius: 7px;
+    box-shadow: 0 0 20px #000;
     background-size: cover;
     margin: 10px;
-    border: 2px solid var(--AltColor);
-    transition: all .2s ease-in-out; 
+    transition: all .2s ease-in-out;
 }
 
-/* designates that the first child will fill the width of the viewport */
-.appImg:first-child {
-    flex: 1 1 100%;
-    height: 300px; 
-}
-
-/* designates that the rest of the children will tile in a regular flex box */
-.appImg:not(:first-child) {
-    flex: 1 1 30%;
-    height: 300px;
-  }
-
-/* image tiles h3 styling */
-.appImg h3 {
-    font-family: var(--MonoFont);
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
-    background-color: var(--AltColor);
-    font-weight: normal;
-    padding: 10px;
-    margin-bottom: 0;
-}
-
-/* image tiles h4 styling */
-.appImg h4 {
-    font-family: var(--SansFont);
-    font-size: 15px;
-    text-align: center;
-    color: var(--AltColor);
-    background-color: rgba(0,0,0,0.7);
-    border-bottom: 2px solid var(--AltColor);
-    padding: 5px;
-    margin-top: 0;
-}
-
-a h3:hover .appImg {
-    box-shadow: 0 0 10px #000;
+.projCard:hover {
     transform: scale(1.1);
 }
 
-/* styling footer */
-footer {
-    border-top: 3px solid var(--AltColor);
-    padding-top: 20px;
-}
-
-/* styling the contact section */
-#contact {
-    background-color: var(--NeutColor);
-    color: var(--MainColor);
-    font-size: 15px;
-    text-align: center;
-    font-family: var(--MonoFont);
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: space-around;
-}
-
-/* setting flex container for the contact section */
-.contactChild {
-    flex: 1;
-    width: 40%;
-    height: 200px;
-    padding: 15px;
-    margin: 2%;
-    text-align: left;
-}
-
-/* setting style for contact header */
-.contactChild h2 {
-    text-align: center;
-    font-size: 30px;
-}
-
-/* styling links in the contact section */
-.contactChild a {
+.projCard h4 {
+    background-color: var(--AltColor);
     color: #fff;
-    text-shadow: 1px 1px 2px #000;
-}
-.contactChild a:hover {
-    color: var(--MainColor);
+    font-family: var(--MonoFont);
+    font-size: 15px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    margin: 130px auto 0 auto;
 }
 
-/* styling the form */
-#message {
-    width: 80%;
-    height: 100px;
-    overflow: auto;
-    margin-top: 10px;
-    word-wrap: normal;
+/*--- footer code ---*/
+footer {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    padding: 20px 10px;
+    margin-top: -50px;
+    border: 1px solid var(--NeutColor);
+    background-color: var(--NeutColor);
+    color: var(--Neut1Color);
+    transform: skewY(2deg);
+    z-index: 900;
 }
-#submit {
+
+.footerContent {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    border: 1px solid var(--NeutColor);
+    background-color: var(--NeutColor);
+    padding: 20px 10px;
+    margin-top: 25px;
     font-family: var(--SansFont);
-    padding: 5px;
-    vertical-align: top;
-    margin-top: 10px;
+    font-size: 20px;
+    text-align: justify;
+    color: var(--HighlightColor);
+    z-index: 901;
 }
 
 /* Large smartphones - navbar changes color */
-  @media screen and (max-width: 992px) {
-    #splash h1 {
-        font-size: 50px;
+@media screen and (max-width: 992px) {
+    .projFlex {
+        margin: 0 10px 50px 10px;
     }
-    #splash h2 {
-        font-size: 15px;
+
+    .projFlex a {
+        flex-basis: 30%;
     }
-    .profileFlex {
-        flex-direction: column;
-        margin: 0 10% 150px 10%;
-        padding: 15px;
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 768px) {
+    .projFlex {
+        margin: 0 10px 50px 10px;
     }
-    #profile img {
-        width: 95%;
-        max-height: 300px;
-        object-fit: cover;
-        margin: 0;
+
+    .projFlex a {
+        flex-basis: 50%;
     }
-    #profile p {
-        height: 300px;
-    }
-    #applications .pBorder {
-        width: 80%;
-    }
-    .appImg {
-        flex: 1 1 50%;
-        min-height: 250px;
-    }
-  }
-  
-  /* Small smartphones - image placeholders change color */
-  @media screen and (max-width: 768px) {
-    .profileFlex {
-        flex-direction: column;
-        margin: 0 10% 150px 10%;
-        padding: 15px;
-    }
-    #profile img {
-        width: 95%;
-        max-height: 300px;
-        object-fit: cover;
-        margin: 0;
-    }
-    #profile p {
-        height: 300px;
-    }
-    #applications .pBorder {
-        width: 80%;
-    }
-    .appImg {
-        flex: 1 1 50%;
-        min-height: 250px;
-    }
-    #contact {
-        flex-direction: column;
-    }
-    .contactChild {
-        width: 90%;
-        border: none;
-        margin: 10px 0 10px 2%;
-    }
-  }
-  
+}
 
 @media screen and (max-width: 576px) {
-    .profileFlex {
-        flex-direction: column;
-        margin: 0 5% 150px 5%;
-        padding: 15px;
+    .projFlex {
+        flex-flow: column;
+        margin: 0 10px 50px 10px;
     }
-    #profile img {
-        width: 95%;
-        max-height: 300px;
-        object-fit: cover;
-        margin: 0;
-    }
-    #profile p {
-        height: 300px;
-    }
-    #applications .pBorder {
+
+    .projFlex a {
         width: 90%;
     }
-    .appsFlex {
-        flex-direction: column;
-    }
-    .appImg {
-        width: 100%;
-        min-height: 250px;
-    }
-    #contact {
-        flex-direction: column;
-    }
-    .contactChild {
-        width: 90%;
-        border: none;
-        margin: 10px 0 10px 2%;
-    }
-  }
-  
-  
+}
