@@ -37,6 +37,7 @@ nav {
     height: 100px;
     z-index: 998;
     transform: skewY(2deg);
+    outline: 1px solid transparent;
 }
 
 .link {
@@ -121,6 +122,7 @@ header a {
     background-repeat: no-repeat;
     margin: -30px 0;
     transform: skewY(2deg);
+    outline: 1px solid transparent;
 }
 
 .aboutContent {
@@ -130,6 +132,7 @@ header a {
     font-size: 20px;
     text-align: center;
     transform: skewY(-2deg);
+    outline: 1px solid transparent;
 }
 
 .aboutContent p {
@@ -191,6 +194,7 @@ header a {
 
 .projCard:hover {
     transform: scale(1.1);
+    outline: 1px solid transparent;
 }
 
 .projCard h4 {
@@ -215,6 +219,7 @@ footer {
     background-color: var(--NeutColor);
     color: var(--Neut1Color);
     transform: skewY(2deg);
+    outline: 1px solid transparent;
     z-index: 900;
 }
 
@@ -260,6 +265,7 @@ footer {
 .footerContact:hover {
     color: var(--AltColor);
     transform: scale(1.1);
+    outline: 1px solid transparent;
 }
 
 .footerContent h5 {
