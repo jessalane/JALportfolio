@@ -10,24 +10,8 @@
     --SansFont: 'Dosis', sans-serif;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: var(--NeutColor);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: var(--AltColor);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--MainColor);
+body::-webkit-scrollbar {
+    display: none;
 }
 
 body,
@@ -35,6 +19,7 @@ html {
     position: absolute;
     overflow-x: hidden;
     margin: 0;
+    padding: 0;
     width: 100%;
 }
 
